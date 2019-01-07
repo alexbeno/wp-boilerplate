@@ -1,0 +1,33 @@
+@function getColor($color) {
+  @if map-has-key($colors, '#{$color}') {
+
+    $color-value: map-get($colors, '#{$color}');
+
+    @return $color-value;
+
+  }
+}
+
+@mixin color($color) {
+  @if map-has-key($colors, '#{$color}') {
+
+    $color-value: map-get($colors, '#{$color}');
+
+    color: $color-value;
+
+  }
+}
+
+@mixin bgColor($color) {
+  @if map-has-key($colors, '#{$color}') {
+
+    $color-value: map-get($colors, '#{$color}');
+
+    background-color: $color-value;
+
+  }
+}
+
+  // @include color(blue)
+  // @include bgColor(white)
+  // getColor(white)

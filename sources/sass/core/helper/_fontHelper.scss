@@ -1,0 +1,37 @@
+@mixin weight($size) {
+// If the breakpoint exists in the map.
+  @if map-has-key($weightValue, $size) {
+
+    // Get the breakpoint value.
+    $size-value: map-get($weightValue, $size);
+
+    font-weight: $size-value;
+
+  }
+}
+
+@mixin fontStyle($type) {
+  @if map-has-key($textOptions, $type) {
+    $type-value: map-get($textOptions, $type);
+    @if map-has-key($type-value, size) {
+      $size-value: map-get($type-value, size);
+      font-size: $size-value;
+    }
+    @if map-has-key($type-value, color) {
+      $color-value: map-get($type-value, color);
+      @include color($color-value);
+    }
+    @if map-has-key($type-value, weight) {
+      $weight-value: map-get($type-value, weight);
+      @include weight($weight-value);
+    }
+    @if map-has-key($type-value, lineheight) {
+      $lineheight-value: map-get($type-value, lineheight);
+      line-height: $lineheight-value;
+    } @else {
+      line-height: 1.5;
+    }
+  }
+}
+
+// @include fontStyle(h2)

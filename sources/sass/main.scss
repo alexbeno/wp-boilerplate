@@ -1,0 +1,76 @@
+/*
+* variable and mixin
+*/
+
+// @import "abstracts/_abstracts.scss";
+
+/*
+* base and reset
+*/
+
+// @import "base/_base.scss";
+
+/*
+* components
+*/
+
+// @import "components/_components.scss";
+
+/*
+* layout
+*/
+
+// @import "layout/_layout.scss";
+
+/*
+* views
+*/
+
+// @import "views/_views.scss";
+
+/*
+* core
+*/
+
+@import "core/_main.scss";
+
+
+
+// to delete {
+
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%
+  }
+
+  .container {
+    // background: grey;
+
+  }
+
+  .column {
+    width: 100px;
+    height: 100px;
+    @include flex()
+    @include fontStyle(h2);
+    &:nth-child(1n + 1) {
+      background: red;
+    }
+    &:nth-child(2n + 1) {
+      background: pink;
+    }
+    &:nth-child(3n + 1) {
+      background: darkblue;
+    }
+    &:nth-child(4n + 1) {
+      background: darkmagenta;
+    }
+    &:nth-child(5n + 1)  {
+      background: darkorange;
+    }
+    &:nth-child(6n + 1) {
+      background: peachpuff;
+    }
+  }

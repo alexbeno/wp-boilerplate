@@ -1,0 +1,124 @@
+.page--wrapper {
+  width: 100vw;
+  height: auto;
+}
+
+.page--content {
+  width: get-grid(page, size);
+  height: auto;
+  margin: auto;
+  @include custom(get-grid(page, size)) {
+    width: 100vw;
+  }
+}
+
+.container {
+  &.center {
+    width: calc(100% - (#{get-grid(horizontal, xl)} * 2 ));
+    margin-left: auto;
+    margin-right: auto;
+    @include lg-xlarge {
+      width: calc(100% - (#{get-grid(horizontal, lg-xl)} * 2 ));
+    }
+    @include large {
+      width: calc(100% - (#{get-grid(horizontal, lg)} * 2 ));
+    }
+    @include md-large {
+      width: calc(100% - (#{get-grid(horizontal, md-lg)} * 2 ));
+    }
+    @include medium {
+      width: calc(100% - (#{get-grid(horizontal, md)} * 2 ));
+    }
+    @include small {
+      width: calc(100% - (#{get-grid(horizontal, sm)} * 2 ));
+    }
+  }
+
+  &.full {
+    width: 100%;
+  }
+
+  &.bg {
+    padding: 0 get-grid(horizontal, xl);
+    @include lg-xlarge {
+      padding: 0 get-grid(horizontal, lg-xl);
+    }
+    @include large {
+      padding: 0 get-grid(horizontal, lg);
+    }
+    @include md-large {
+      padding: 0 get-grid(horizontal, md-lg);
+    }
+    @include medium {
+      padding: 0 get-grid(horizontal, md);
+
+    }
+    @include small {
+      padding: 0 get-grid(horizontal, sm);
+    }
+  }
+
+  &.left {
+    width: 100%;
+    padding-left: get-grid(horizontal, xl);
+    @include lg-xlarge {
+      padding-left: get-grid(horizontal, lg-xl);
+    }
+    @include large {
+      padding-left: get-grid(horizontal, lg);
+    }
+    @include md-large {
+      padding-left: get-grid(horizontal, md-lg);
+    }
+    @include medium {
+      padding-left: get-grid(horizontal, md);
+    }
+    @include small {
+      padding-left: get-grid(horizontal, sm);
+    }
+  }
+
+  &.right {
+    width: 100%;
+    padding-right: get-grid(horizontal, xl);
+    @include lg-xlarge {
+      padding-right: get-grid(horizontal, lg-xl);
+    }
+    @include large {
+      padding-right: get-grid(horizontal, lg);
+    }
+    @include md-large {
+      padding-right: get-grid(horizontal, md-lg);
+    }
+    @include medium {
+      padding-right: get-grid(horizontal, md);
+    }
+    @include small {
+      padding-right: get-grid(horizontal, sm);
+    }
+  }
+
+  &.mb {
+    &--sm {
+      margin-bottom: get-grid(vertical, sm);
+    }
+    &--md {
+      margin-bottom: get-grid(vertical, md);
+    }
+    &--lg {
+      margin-bottom: get-grid(vertical, lg);
+    }
+  }
+
+  &.mt {
+    &--sm {
+      margin-top: get-grid(vertical, sm);
+    }
+    &--md {
+      margin-top: get-grid(vertical, md);
+    }
+    &--lg {
+      margin-top: get-grid(vertical, lg);
+    }
+  }
+}

@@ -1,0 +1,124 @@
+/*
+* media query mixins
+*/
+
+
+@mixin small {
+  $breakpoint-value: map-get($breakpoint, sm);
+
+  @if($queryType == 'min') {
+    @media (min-width: #{$breakpoint-value}) {
+      @content;
+    }
+  }
+  @else {
+    @media (max-width: #{$breakpoint-value}) {
+      @content;
+    }
+  }
+}
+
+
+@mixin medium {
+  $breakpoint-value: map-get($breakpoint, md);
+  @if($queryType == 'min') {
+    @media (min-width: #{$breakpoint-value}) {
+      @content;
+    }
+  }
+  @else {
+    @media (max-width: #{$breakpoint-value}) {
+      @content;
+    }
+  }
+}
+
+@mixin md-large {
+  $breakpoint-value: map-get($breakpoint, md-lg);
+  @if($queryType == 'min') {
+    @media (min-width: #{$breakpoint-value}) {
+      @content;
+    }
+  }
+  @else {
+    @media (max-width: #{$breakpoint-value}) {
+      @content;
+    }
+  }
+}
+
+@mixin large {
+  $breakpoint-value: map-get($breakpoint, l);
+  @if($queryType == 'min') {
+    @media (min-width: #{$breakpoint-value}) {
+      @content;
+    }
+  }
+  @else {
+    @media (max-width: #{$breakpoint-value}) {
+      @content;
+    }
+  }
+}
+
+@mixin lg-xlarge {
+  $breakpoint-value: map-get($breakpoint, lg-xl);
+  @if($queryType == 'min') {
+    @media (min-width: #{$breakpoint-value}) {
+      @content;
+    }
+  }
+  @else {
+    @media (max-width: #{$breakpoint-value}) {
+      @content;
+    }
+  }
+}
+
+@mixin xlarge {
+  $breakpoint-value: map-get($breakpoint, xl);
+  @if($queryType == 'min') {
+    @media (min-width: #{$breakpoint-value}) {
+      @content;
+    }
+  }
+  @else {
+    @media (max-width: #{$breakpoint-value}) {
+      @content;
+    }
+  }
+}
+
+// special
+
+@mixin retina {
+  @media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
+    @content;
+  }
+}
+
+@mixin smallOnli {
+  $breakpoint-value: map-get($breakpoint, mobileMin);
+  @media (min-width: #{$breakpoint-value}) {
+    @content;
+  }
+}
+
+@mixin custom($size) {
+  @if($queryType == 'min') {
+    @media (min-width: #{$size}) {
+      @content;
+    }
+  }
+  @else {
+    @media (max-width: #{$size}) {
+      @content;
+    }
+  }
+}

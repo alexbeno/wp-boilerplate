@@ -1,0 +1,50 @@
+/*
+* color options
+*/
+
+$colors: (
+  'black': #000,
+  'white': #FFF,
+);
+
+/*
+* text options
+*/
+
+$textOptions : (
+  'h1': (
+    'size': 30px,
+    'color': white,
+    'weight': bold,
+    'lineheight': 1.6,
+  ),
+  'h2': (
+    'size': 20px,
+    'color': black,
+    'weight': regular,
+    'lineheight': 1.7,
+  )
+);
+
+/*
+* grid settings
+*/
+
+$gridSettings: (
+  'page': (
+    'size': 100vw,
+  ),
+  'horizontal': (
+    'sm': 15px,
+    'md': 30px,
+    'md-lg': 70px,
+    'lg': 100px,
+    'lg-xl': 150px,
+    'xl': 200px,
+  ),
+  'vertical': (
+    'sm': 50px,
+    'md': 80px,
+    'lg': 100px,
+  )
+);

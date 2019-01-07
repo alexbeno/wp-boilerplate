@@ -1,0 +1,13 @@
+@function get-grid($setting, $value) {
+  @if map-has-key($gridSettings, '#{$setting}') {
+
+    $setting-params: map-get($gridSettings, '#{$setting}');
+
+    @if map-has-key($setting-params, '#{$value}') {
+      $setting-value: map-get($setting-params, '#{$value}');
+      @return $setting-value;
+    } @else {
+      @warn 'Invalid breakpoint: #{$value}.';
+    }
+  }
+}
