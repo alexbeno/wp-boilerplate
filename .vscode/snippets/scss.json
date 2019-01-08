@@ -1,0 +1,87 @@
+{
+  "display_flex": {
+    "prefix": "flinked-flex",
+    "body": [
+      "@include flex(\\$direction: ${1|row,column|}, \\$justify: ${2|center, space-between, space-around, flex-start,flex-end|}, \\$align: ${3|center, space-between, space-around, flex-start,flex-end|} , \\$wrap: ${4|false, true|});"
+    ],
+    "description": "Insert flex mixin"
+  },
+  "background_image": {
+    "prefix": "flinked-bg",
+    "body": [
+      "@include background(\\$size: ${1|cover,contain|});"
+    ],
+    "description": "Insert background mixin"
+  },
+  "font_style": {
+    "prefix": "flinked-font",
+    "body": [
+      "@include fontStyle(\\$type: ${1});"
+    ],
+    "description": "Insert font style mixin"
+  },
+  "text_color": {
+    "prefix": "flinked-txtcolor",
+    "body": [
+      "@include color(\\$color: ${1});"
+    ],
+    "description": "Insert text color mixin"
+  },
+  "bg_color": {
+    "prefix": "flinked-bgcolor",
+    "body": [
+      "@include color(\\$bgColor: ${1});"
+    ],
+    "description": "Insert background color mixin"
+  },
+  "get_color": {
+    "prefix": "flinked-getcolor",
+    "body": [
+      "getColor(\\$bgColor: ${1});"
+    ],
+    "description": "get color function"
+  },
+  "pseudo": {
+    "prefix": "flinked-pseudo",
+    "body": [
+      "@include pseudo(${1});"
+    ],
+    "description": "get color function"
+  },
+  "small_media": {
+    "prefix": "flinked-media-sm",
+    "body": [
+      "@include small{",
+        "  ${1}",
+      "}"
+    ],
+    "description": "small media query"
+  },
+  "medium_media": {
+    "prefix": "flinked-media-md",
+    "body": [
+      "@include medium{",
+        "  ${1}",
+      "}"
+    ],
+    "description": "small media query"
+  },
+  "large_media": {
+    "prefix": "flinked-media-lg",
+    "body": [
+      "@include large {",
+        "  ${1}",
+      "}"
+    ],
+    "description": "large media query"
+  },
+  "custom_media": {
+    "prefix": "flinked-media-custom",
+    "body": [
+      "@include custom(${1}) {",
+        "  ${2}",
+      "}"
+    ],
+    "description": "custome media query"
+  },
+}

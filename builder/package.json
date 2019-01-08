@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "utile": "sh sh/utilePanel.sh",
+    "components": "sh sh/utilePanel.sh",
+    "page": "sh sh/createPages.sh",
+    "section": "sh sh/createSection.sh"
   },
   "author": "",
   "license": "ISC",
